@@ -1,0 +1,12 @@
+[
+  {
+    "label": "Debug learning (Clang)",
+    "adapter": "CodeLLDB",
+    "request": "launch",
+    "build": "CMake: build (debug)",
+    "program": "$ZED_WORKTREE_ROOT/build/debug/learning.exe",
+    "args": [],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "stopOnEntry": false
+  }
+]

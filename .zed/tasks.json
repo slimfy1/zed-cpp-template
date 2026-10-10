@@ -1,0 +1,39 @@
+[
+  {
+    "label": "CMake: build (debug)",
+    "command": "cmake",
+    "args": ["--workflow", "--preset", "debug"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always",
+    "hide": "never"
+  },
+  {
+    "label": "CMake: build (release)",
+    "command": "cmake",
+    "args": ["--workflow", "--preset", "release"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "Run (debug)",
+    "command": "cmake",
+    "args": ["--workflow", "--preset", "run-debug"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always",
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Run (release)",
+    "command": "cmake",
+    "args": ["--workflow", "--preset", "run-release"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "CMake: clean",
+    "command": "cmake",
+    "args": ["-E", "rm", "-rf", "build"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "no_focus"
+  }
+]
