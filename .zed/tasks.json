@@ -16,6 +16,20 @@
   },
   {
     "label": "Run (debug)",
+    "command": "cmake --workflow --preset debug; if ($LASTEXITCODE -eq 0) { .\\build\\debug\\learning.exe }",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always",
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Run (release)",
+    "command": "cmake --workflow --preset release; if ($LASTEXITCODE -eq 0) { .\\build\\release\\learning.exe }",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always",
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Run (debug) Cmake",
     "command": "cmake",
     "args": ["--workflow", "--preset", "run-debug"],
     "cwd": "$ZED_WORKTREE_ROOT",
@@ -23,7 +37,7 @@
     "allow_concurrent_runs": false
   },
   {
-    "label": "Run (release)",
+    "label": "Run (release) Cmake",
     "command": "cmake",
     "args": ["--workflow", "--preset", "run-release"],
     "cwd": "$ZED_WORKTREE_ROOT",
